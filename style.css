@@ -1,0 +1,147 @@
+
+body{
+    background-color: hsl(330, 100%, 98%);
+    align-items: center;
+    margin-top: -7em;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.container{
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    display: block;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0;
+    padding: 10px;
+}
+.body{
+    box-sizing: border-box;
+    background: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    align-items: center;
+    margin: 25% auto;
+    padding: 20px;
+    width: 90%;
+}
+img{
+    border-radius: 8px;
+    width:100%;
+}
+
+section{
+    background-color:hsl(330, 100%, 98%);
+    margin-bottom: 20px;
+    border-radius: 8px;
+    flex-direction: column;
+}
+section h3{
+    color: hsl(332, 51%, 32%);
+    margin: 20px ;
+    padding-top: 20px;
+}
+main h2{
+    color: hsl(14, 45%, 36%);
+}
+
+ul{
+    list-style: none;
+    /* text-indent: -25px; */
+    padding: 10px;
+    margin: 10px; 
+}
+.colored-bullets::before{
+    content: '\2022';
+    color: hsl(14, 45%, 36%);
+    margin-right: 10px;  
+    display: inline-flex;
+    align-items: flex-start;
+}
+.colored-bullets{
+    min-width: 80px;
+    text-align: left;
+}
+ol{
+    list-style: none;
+    counter-reset: my-counter;
+}
+.colored-numbers{
+    counter-increment: my-counter;
+    position: relative;
+}
+.colored-numbers::before{
+    content: counter(my-counter)".";
+    position: absolute;
+    color: hsl(14, 45%, 36%);;
+    left: -30px;
+   
+}
+
+footer h2{
+    color: hsl(14, 45%, 36%);
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+td{
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+tr:last-child td{
+    border-bottom: none;
+}
+td:nth-child(2){
+    text-align: left;
+    color: hsl(14, 45%, 36%);;
+}
+
+@media (max-width:375px){
+   body{
+        justify-content: center;
+        width: 600px;
+        max-width: 100%;
+        margin: 2px;
+        margin-top: -20rem;
+    } 
+    .container{
+        margin: 100px;
+        padding: 5px;
+        font-size: 12px;
+    }
+    img{
+        width: 100%;
+    }
+    section{
+        margin: -5px;
+        padding: 5px;
+    }
+    ul,
+    ol{      
+        padding: 2px;
+        margin: 2px;
+    }
+    section h3{
+        margin: 10px ;
+        padding-top: 10px;
+    }
+    .colored-numbers::before{
+        left: -1rem;
+    }
+    table{
+        width: 100%;
+        font: 12px;
+    }
+    td{
+        padding: 4px;
+    }
+}
+
+@media (max-width: 500px){
+    .body{
+        font-size: 12px;
+        width: 100%;
+        margin-top: 17rem;
+    }
+}
